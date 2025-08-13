@@ -1,1 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 @import "tailwindcss";
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  margin: auto;
+}
+
+body {
+  background-color: #050505;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Gradient text utility classes */
+.gradient-text {
+  background: linear-gradient(94.78deg, rgba(255,255,255,1) 2.01%, rgba(255,255,255,0.44) 100.62%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-stats {
+  background: linear-gradient(94.78deg, rgba(255,255,255,1) 2.01%, rgba(255,255,255,0.44) 100.62%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glassmorphism card effect */
+.glass-card {
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
+
+/* Blur effects for background elements */
+.blur-light {
+  filter: blur(13.999999046325684px);
+}
+
+.blur-heavy {
+  filter: blur(27px);
+}
+
+/* Custom button styles */
+.cta-button {
+  background: linear-gradient(95.46deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.51) 101.07%);
+  color: #06070a;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* Animation keyframes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  animation: rotate 20s linear infinite;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .gradient-text {
+    font-size: 3rem !important;
+  }
+  
+  .glass-card {
+    margin: 1rem;
+  }
+}
